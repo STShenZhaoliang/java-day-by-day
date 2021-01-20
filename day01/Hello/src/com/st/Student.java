@@ -1,3 +1,5 @@
+package com.st;
+
 public class Student {
     String name;
     int age;
@@ -40,3 +42,4 @@ public class Student {
                 '}';
     }
 }
+
