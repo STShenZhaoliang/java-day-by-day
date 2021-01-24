@@ -1,6 +1,6 @@
 package druid;
 
-import util.JDBCUtils;
+import util.JDBCTools;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -22,7 +22,7 @@ public class DruidDemo2 {
         PreparedStatement pstmt = null;
         try {
             //1.获取连接
-            conn = JDBCUtils.getConnection();
+            conn = JDBCTools.getConnection();
             //2.定义sql
             String sql = "insert into account values(null,?,?)";
             //3.获取pstmt对象
@@ -37,7 +37,7 @@ public class DruidDemo2 {
             e.printStackTrace();
         }finally {
             //6. 释放资源
-            JDBCUtils.close(pstmt,conn);
+            JDBCTools.close(pstmt,conn);
         }
     }
 
