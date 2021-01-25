@@ -20,7 +20,7 @@ import java.util.Map;
  * @create: 2021-01-25 14:29
  **/
 
-@WebServlet("/loginServlet")
+@WebServlet("/s1")
 public class LoginServlet extends HttpServlet {
 
 
