@@ -1,1 +1,4 @@
+cn/st/dao/impl/UserDaoImpl.class
+cn/st/dao/UserDao.class
+cn/st/domain/User.class
 cn/st/servlet/MyServlet.class
