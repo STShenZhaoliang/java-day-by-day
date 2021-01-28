@@ -50,6 +50,7 @@
       <change afterPath="$PROJECT_DIR$/../day05/target/day05/WEB-INF/web.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../day05/target/day05/index.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../day05/target/day05/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +182,7 @@
       <updated>1611544084210</updated>
       <workItem from="1611544092537" duration="1162000" />
       <workItem from="1611546139754" duration="4660000" />
-      <workItem from="1611568863193" duration="319000" />
+      <workItem from="1611568863193" duration="406000" />
     </task>
     <servers />
   </component>
