@@ -15,7 +15,7 @@ import java.util.List;
 
 public class UserTest {
     @Test
-    public void findAll() throws  Exception{
+    public void findAll() throws Exception{
         UserDao userDao = new UserDaoImpl();
         List<User> list = userDao.findAll();
         for (User user : list) {
