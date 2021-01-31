@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    <bean id="userDao" class="cn.st.dao.impl.UserDaoImpl" ></bean>-->
+<!--    <bean id="userDao" class="cn.st.dao.impl.UserDaoImpl" scope="singleton"></bean>-->
+<!--    <bean id="userDao" class="cn.st.dao.impl.UserDaoImpl" scope="prototype"></bean>-->
+
+<!--    destroy 必须是singleton模式下-->
+<!--    <bean id="userDao" class="cn.st.dao.impl.UserDaoImpl" init-method="init" destroy-method="destroy" scope="singleton"></bean>-->
+
+<!--    动态工厂-->
+<!--    <bean id="factory" class="cn.st.factory.DynamicFactory"></bean>-->
+<!--    <bean id="userDao" factory-bean="factory" factory-method="getUserDao"></bean>-->
+
+    <!--    静态工厂-->
+<!--    <bean id="userDao" class="cn.st.factory.StaticFactory" factory-method="getUserDao"></bean>-->
+
+<!--    set方法-->
+<!--    <bean id="userService" class="cn.st.service.impl.UserServiceImpl">-->
+<!--        <property name="userDao" ref="userDao"></property>-->
+<!--    </bean>-->
+<!--    <bean id="userService" class="cn.st.service.impl.UserServiceImpl" p:userDao-ref="userDao"/>-->
+
+<!--    有参构造-->
+    <bean id="userService" class="cn.st.service.impl.UserServiceImpl">
+        <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+    </bean>
+
+<!--   普通数据类型 -->
+    <bean id="userDao" class="cn.st.dao.impl.UserDaoImpl">
+        <property name="username" value="st"></property>
+        <property name="age" value="133"></property>
+        <property name="strList">
+            <list>
+                <value>aaa</value>
+                <value>bbb</value>
+                <value>ccc</value>
+            </list>
+        </property>
+        <property name="userMap">
+            <map>
+                <entry key="k1" value-ref="user1"></entry>
+                <entry key="k2" value-ref="user2"></entry>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="p1">ppp1</prop>
+                <prop key="p2">ppp2</prop>
+                <prop key="p3">ppp3</prop>
+            </props>
+        </property>
+     </bean>
+
+    <bean id="user1" class="cn.st.domain.User">
+        <property name="name" value="tom"/>
+        <property name="addr" value="beijing"/>
+    </bean>
+    <bean id="user2" class="cn.st.domain.User">
+        <property name="name" value="lucy"/>
+        <property name="addr" value="tianjin"/>
+    </bean>
+
+<!--    导入-->
+    <import resource="applicationContext-product.xml"></import>
+    <import resource="applicationContext-user.xml"></import>
+</beans>
