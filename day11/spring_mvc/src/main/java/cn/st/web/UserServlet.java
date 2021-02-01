@@ -23,8 +23,8 @@ public class UserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
         ServletContext servletContext = this.getServletContext();
-        ApplicationContext app = (ApplicationContext) servletContext.getAttribute("app");
-//        ApplicationContext app = WebApplicationContextUtils.getWebApplicationContext(servletContext);
+//        ApplicationContext app = (ApplicationContext) servletContext.getAttribute("app");
+        ApplicationContext app = WebApplicationContextUtils.getWebApplicationContext(servletContext);
         UserService userService = app.getBean(UserService.class);
         userService.save();
     }
