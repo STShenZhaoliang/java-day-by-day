@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
  **/
 
 @Controller
-//@RequestMapping("/user")
+@RequestMapping("/user")
 public class UserController {
 
-    @RequestMapping("/quick")
+//    @RequestMapping("/quick")
     // 请求地址  http://localhost:8080/user/quick
-//    @RequestMapping(value="/quick",method = RequestMethod.GET,params = {"username"})
+    @RequestMapping(value="/quick",method = RequestMethod.GET,params = {"username"})
     public String save(){
         System.out.println("Controller save running....");
         return "success";
