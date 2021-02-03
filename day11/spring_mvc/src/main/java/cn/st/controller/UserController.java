@@ -6,11 +6,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Date;
@@ -25,6 +27,27 @@ import java.util.List;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+
+    @RequestMapping(value="/q23")
+    @ResponseBody
+    public void save23(String username, MultipartFile[] uploadFile) throws IOException {
+        System.out.println(username);
+        for (MultipartFile multipartFile : uploadFile) {
+            String originalFilename = multipartFile.getOriginalFilename();
+            multipartFile.transferTo(new File("/Users/air/Desktop/"+originalFilename));
+        }
+    }
+
+    @RequestMapping(value="/q22")
+    @ResponseBody
+    public void save22(String username, MultipartFile uploadFile,MultipartFile uploadFile2) throws IOException {
+        System.out.println(username);
+        //获得上传文件的名称
+        String originalFilename = uploadFile.getOriginalFilename();
+        uploadFile.transferTo(new File("/Users/air/Desktop/"+originalFilename));
+        String originalFilename2 = uploadFile2.getOriginalFilename();
+        uploadFile2.transferTo(new File("/Users/air/Desktop/"+originalFilename2));
+    }
 
 
     @RequestMapping(value="/q21")
