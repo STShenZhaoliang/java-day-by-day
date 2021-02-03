@@ -20,4 +20,18 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 
     <!--4、组件扫描  扫描Controller-->
     <context:component-scan base-package="cn.st.controller"/>
+
+    <!--配置拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--对哪些资源执行拦截操作-->
+            <mvc:mapping path="/**"/>
+            <bean class="cn.st.interceptor.MyInterceptor2"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <!--对哪些资源执行拦截操作-->
+            <mvc:mapping path="/**"/>
+            <bean class="cn.st.interceptor.MyInterceptor1"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
