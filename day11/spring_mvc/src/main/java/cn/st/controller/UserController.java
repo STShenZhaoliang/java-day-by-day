@@ -5,16 +5,15 @@ import cn.st.domain.VO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -26,6 +25,47 @@ import java.util.List;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+
+
+    @RequestMapping(value="/q21")
+    @ResponseBody
+    public void save21(@CookieValue(value = "JSESSIONID") String jsessionId) throws IOException {
+        System.out.println(jsessionId);
+    }
+
+    @RequestMapping(value="/q20")
+    @ResponseBody
+    public void save20(@RequestHeader(value = "User-Agent",required = false) String user_agent) throws IOException {
+        System.out.println(user_agent);
+    }
+
+
+    @RequestMapping(value="/q19")
+    @ResponseBody
+    public void save19(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws IOException {
+        System.out.println(request);
+        System.out.println(response);
+        System.out.println(session);
+    }
+
+    @RequestMapping(value="/q18")
+    @ResponseBody
+    public void save18(Date date) throws IOException {
+        System.out.println(date);
+    }
+
+    // localhost:8080/user/q17/zhangsan
+    @RequestMapping(value="/q17/{name}")
+    @ResponseBody
+    public void save17(@PathVariable(value="name") String username) throws IOException {
+        System.out.println(username);
+    }
+
+    @RequestMapping(value="/q16")
+    @ResponseBody
+    public void save16(@RequestParam(value="name",required = false,defaultValue = "st") String username) throws IOException {
+        System.out.println(username);
+    }
 
     @RequestMapping(value="/q15")
     @ResponseBody
