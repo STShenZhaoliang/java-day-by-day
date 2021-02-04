@@ -15,7 +15,7 @@
     <bytecodeTargetLevel>
       <module name="spring_jdbc" target="14" />
       <module name="spring_mvc" target="14" />
-      <module name="spring_tx" target="1.7" />
+      <module name="spring_tx" target="14" />
       <module name="spring_tx_anno" target="1.7" />
     </bytecodeTargetLevel>
   </component>
