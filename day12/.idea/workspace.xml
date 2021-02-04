@@ -20,12 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a7af381-dc52-40fc-93ef-14d2e6a97182" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/st/interceptor/MyInterceptor1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/st/interceptor/MyInterceptor2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/error.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1612337081748</updated>
       <workItem from="1612337083905" duration="3681000" />
+      <workItem from="1612400148597" duration="199000" />
     </task>
     <servers />
   </component>
@@ -103,28 +99,33 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="208" y="31" key="#Project_Structure" timestamp="1612337284574">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="208" y="31" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1612337284574" />
-    <state width="1398" height="309" key="GridCell.Tab.0.bottom" timestamp="1612344985252">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="309" key="GridCell.Tab.0.bottom" timestamp="1612348184268">
+      <screen x="48" y="23" width="1392" height="877" />
     </state>
     <state width="1398" height="309" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1612344985252" />
-    <state width="1398" height="309" key="GridCell.Tab.0.center" timestamp="1612344985250">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="309" key="GridCell.Tab.0.bottom/48.23.1392.877@48.23.1392.877" timestamp="1612348184268" />
+    <state width="1398" height="309" key="GridCell.Tab.0.center" timestamp="1612348184264">
+      <screen x="48" y="23" width="1392" height="877" />
     </state>
     <state width="1398" height="309" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1612344985250" />
-    <state width="1398" height="309" key="GridCell.Tab.0.left" timestamp="1612344985249">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="309" key="GridCell.Tab.0.center/48.23.1392.877@48.23.1392.877" timestamp="1612348184264" />
+    <state width="1398" height="309" key="GridCell.Tab.0.left" timestamp="1612348184263">
+      <screen x="48" y="23" width="1392" height="877" />
     </state>
     <state width="1398" height="309" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1612344985249" />
-    <state width="1398" height="309" key="GridCell.Tab.0.right" timestamp="1612344985251">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="309" key="GridCell.Tab.0.left/48.23.1392.877@48.23.1392.877" timestamp="1612348184263" />
+    <state width="1398" height="309" key="GridCell.Tab.0.right" timestamp="1612348184267">
+      <screen x="48" y="23" width="1392" height="877" />
     </state>
     <state width="1398" height="309" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1612344985251" />
+    <state width="1398" height="309" key="GridCell.Tab.0.right/48.23.1392.877@48.23.1392.877" timestamp="1612348184267" />
     <state x="258" y="112" key="Maven.ArtifactSearchDialog" timestamp="1612341101365">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
