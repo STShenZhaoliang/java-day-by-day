@@ -5,6 +5,7 @@ import com.st.dao.UserDao;
 import com.st.domain.Role;
 import com.st.domain.User;
 import com.st.service.UserService;
+import org.springframework.dao.EmptyResultDataAccessException;
 
 import java.util.List;
 
@@ -47,5 +48,13 @@ public class UserServiceImpl implements UserService {
         userDao.del(userId);
     }
 
+    public User login(String username, String password) {
+        try {
+            User user = userDao.findByUsernameAndPassword(username,password);
+            return user;
+        }catch (EmptyResultDataAccessException e){
+            return null;
+        }
+    }
 
 }

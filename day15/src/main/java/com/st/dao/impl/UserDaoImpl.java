@@ -3,6 +3,7 @@ package com.st.dao.impl;
 import com.st.dao.UserDao;
 import com.st.domain.Role;
 import com.st.domain.User;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -64,5 +65,8 @@ public class UserDaoImpl implements UserDao {
         jdbcTemplate.update("delete from sys_user where id=?",userId);
     }
 
-
+    public User findByUsernameAndPassword(String username, String password) throws EmptyResultDataAccessException {
+        User user = jdbcTemplate.queryForObject("select * from sys_user where username=? and password=?", new BeanPropertyRowMapper<User>(User.class), username, password);
+        return user;
+    }
 }
