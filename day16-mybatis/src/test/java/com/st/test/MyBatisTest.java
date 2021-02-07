@@ -88,7 +88,7 @@ public class MyBatisTest {
 
         //模拟user对象
         User user = new User();
-        user.setUsername("xxx");
+        user.setUsername("xxx1111");
         user.setPassword("abc");
 
         //获得核心配置文件
@@ -101,7 +101,7 @@ public class MyBatisTest {
         sqlSession.insert("userMapper.save",user);
 
         //mybatis执行更新操作  提交事务
-        sqlSession.commit();
+//        sqlSession.commit();
 
         //释放资源
         sqlSession.close();
