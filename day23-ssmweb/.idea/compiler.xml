@@ -6,8 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="day23-ssmweb" />
+        <module name="maven_pojo" />
+        <module name="maven_web" />
+        <module name="maven_service" />
+        <module name="son" />
+        <module name="maven_dao" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="maven_bao" target="14" />
+    </bytecodeTargetLevel>
   </component>
 </project>
