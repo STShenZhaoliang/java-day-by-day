@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="health_service:war exploded">
+    <output-path>$PROJECT_DIR$/health_parent/health_service/target/health_service_provider-1.0-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>health_service</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="health_service" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="health_interface-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="health_interface" />
+          </element>
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/health_parent/health_service/target/health_service_provider-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="health_service/web/Web" />
+    </root>
+  </artifact>
+</component>

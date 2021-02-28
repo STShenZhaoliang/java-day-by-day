@@ -12,6 +12,7 @@
         <module>health_common</module>
         <module>health_interface</module>
         <module>health_service_provider</module>
+        <module>health_service</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -36,7 +37,7 @@
 
         <poi.version>3.14</poi.version>
         <jedis.version>2.9.0</jedis.version>
-        <spring.security.version>5.3.4</spring.security.version>
+        <spring.security.version>5.0.5.RELEASE</spring.security.version>
 
         <junit.version>4.12</junit.version>
         <quartz.version>2.2.1</quartz.version>
